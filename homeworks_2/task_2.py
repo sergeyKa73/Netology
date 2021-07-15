@@ -25,27 +25,29 @@ while run:
     command = input('Введите команду: ')
     if command == 'help':
             print(HELP)
+    
     elif command == 'show':
             tasks = tasks_today +  tasks_tomorrow  + tasks_other
             print(tasks)
+    
     elif command == 'exit':
         print('Спасибо за использование! До свидания!')
         break
+    
     elif command == 'add':
         day = input('Введите дату :')
         task = input('Введите название задачи: ')
-    elif day == 'Сегодня':
-        tasks_today.append(task)
-        print('Задача добавлена')
-    elif day == 'Завтра':
-        tasks_tomorrow.append(task)
-        print('Задача добавлена')
-    elif day =='Other':
-        tasks_other.append(task)
-        print('Задача добавлена')
-    elif day != 'Сегодня' or day !='Завтра' or day !='Other':
-        print('Ведите корректную дату')       
+    
+        if day == 'Сегодня':
+            tasks_today.append(task)
+            print('Задача добавлена')
+        elif day == 'Завтра':
+            tasks_tomorrow.append(task)
+            print('Задача добавлена')
+        else:
+            tasks_other.append(task)
+            print('Задача добавлена')
+                    
     else:
         print('Неизвестная команда')
         continue
-
