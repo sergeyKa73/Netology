@@ -1,5 +1,7 @@
 import telebot
 
+# http://t.me/Py_vapor_v2_bot
+
 token = '1804065816:AAE0-UXoZG9kRqWa53D97Gii3DcLqov3rJk'
 
 bot = telebot.TeleBot(token)
